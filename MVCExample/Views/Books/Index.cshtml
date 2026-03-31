@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MVCexample.Models.BookViewModel>;
+
+@{
+    ViewData["Title"] = "Library";
+}
+
+<div class="text-center">
+    <h2 class="display-4">@ViewData["Title"]</h2>
+    <ul>
+        @foreach(var item in Model)
+        {
+        <li class="plank">
+            <h3> @Html.DisplayFor(modelItem => item.Title) </h3>
+
+            <a href='@Url.Action("Details", "Book", new {Id=item.Id}, null)'>
+                <div>
+                    <span> @Html.DisplayNameFor(modelItem => modelItem.Author) </span>
+                    <span> @Html.DisplayFor(modelItem => item.Author) </span>
+                </div>
+            </a>
+        </li>
+        }
+    </ul>
+</div>

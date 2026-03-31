@@ -1,0 +1,15 @@
+@model MVCexample.Models.BookViewModel;
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="text-center">
+
+    <h2> @Html.DisplayFor(model => model.Title) </h2>
+
+    <div class="row">
+        <h3> @Html.DisplayNameFor(model => model.Author) </h3>
+        <h3> @Html.DisplayFor(model => model.Author) </h3>
+    </div>
+</div>
