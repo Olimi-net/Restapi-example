@@ -1,0 +1,22 @@
+<h2>Hello with Django</h2>
+{% with ''|center:id as range %}
+{% for _ in range %}
+{{ forloop.counter }}
+<span>id: {{id}}</span>
+{% endfor %}
+{% endwith %}
+
+{% for k, v in colors.items %}
+<p>
+    <span>{{k}}</span>
+    <span>{{v}}</span>
+</p>
+{% endfor %}
+
+<p>
+    {{ colors.values|join:", "}}
+</p>
+
+<p>
+    <a href="http://olimi.net">Created by Olimi</a>
+</p>

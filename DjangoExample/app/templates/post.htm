@@ -1,0 +1,15 @@
+<h2>User form</h2>
+<form method="post" action="/about/" id="myForm">
+    {% csrf_token %}
+    <p>Name:<br> <input name="name" /></p>
+    <p>Age:<br> <input name="age" type="number" /></p>
+    <input type="submit" value="Send" />
+</form>
+
+<script>
+    const form = document.getElementById('#myForm');
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        console.log('Form submission prevented!');
+    });
+</script>
